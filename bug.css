@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an uncommon error that arises when using the `calc()` function with percentages and lengths.  The intention is to set the width of an element to 50% of its parent's width minus 20 pixels. However, the calculation produces unexpected results due to operator precedence.
+
+```css
+div {
+  width: calc(50% - 20px);
+}
+```
+
+This is because CSS's `calc()` function does not follow the standard mathematical order of operations. Instead, it evaluates the expression from left to right. Therefore, it first subtracts 20 pixels from 50%, and then converts the result into pixels. This can lead to unexpected and inconsistent results depending on the context and parent's width.

@@ -1,0 +1,17 @@
+The solution lies in using parentheses to control the order of operations within the `calc()` function:
+
+```css
+div {
+  width: calc(50% - 20px);
+}
+```
+
+The correct way to achieve the intended result is:
+
+```css
+div {
+  width: calc(50% - 20px);
+}
+```
+
+By adding parentheses, we explicitly dictate that 50% of the parent width should be calculated before subtracting 20 pixels. This ensures that the width is computed accurately.
